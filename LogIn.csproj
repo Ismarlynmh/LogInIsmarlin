@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+	<StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqLite" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+
+	  <Content Include="Resources\*.*">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\borrar.png" />
+    <None Remove="Resources\disquete.png" />
+    <None Remove="Resources\eliminar.png" />
+    <None Remove="Resources\lupa.png" />
+    <None Remove="Resources\new-file-icon.png" />
+    <None Remove="Resources\new-icon.png" />
+    <None Remove="Resources\nuevo-documento.png" />
+    <None Remove="Resources\nuevo.png" />
+    <None Remove="Resources\opcionguardar.png" />
+    <None Remove="Resources\Recycle-Bin-icon.png" />
+    <None Remove="Resources\Save-icon.png" />
+    <None Remove="Resources\Trash-empty-icon.png" />
+    <None Remove="Resources\Zoom.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+</Project>
